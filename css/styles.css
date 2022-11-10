@@ -1,0 +1,242 @@
+:root {
+    --main-dark-clr: #212121;
+    --main-gray-clr: #757575;
+    --main-white-clr: #FFFFFF;
+}
+
+/* 
+темный цвет основного текста #212121
+светлый цвет основного текста #757575
+светлый дополнительный цвеn текста #FFFFFF 
+*/
+
+body {
+    font-family: 'Roboto', 'Raleway', sans-serif;
+    color: #212121;
+}
+
+/* сброс маркированых точек в списках */
+.list {
+    list-style: none;
+}
+
+/* section nav */
+.header {
+    background-color: var(--main-white-clr);
+    ;
+}
+
+.logo {
+    color: #000000;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    letter-spacing: 0.03em;
+}
+
+.logo-letter {
+    color: #2196F3;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.header .nav-link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: #212121;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #2196F3;
+}
+
+.nav-contacts-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: var(--main-gray-clr);
+}
+
+.nav-contacts-link:hover,
+.nav-contacts-link:focus {
+    color: #2196F3;
+}
+
+.nav-menu .link.current {
+    color: #2196F3;
+}
+
+.hero {
+    background-color: #2F303A;
+}
+
+.hero-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: calc(60 / 44);
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--main-white-clr);
+}
+
+.hero-button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--main-white-clr);
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.hero-button:active {
+    background-color: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.benefits-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-dark-clr);
+}
+
+.benefits-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--main-gray-clr);
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    letter-spacing: 0.03em;
+}
+
+.card-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    letter-spacing: 0.03em;
+}
+
+.card-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    color: var(--main-gray-clr);
+}
+
+
+.footer {
+    background-color: #2F303A;
+}
+
+.footer-logo {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    color: var(--main-white-clr);
+}
+
+.footer-list-adress {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    color: var(--main-white-clr);
+}
+
+.footer-list-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-list-link:hover,
+.footer-list-link:focus {
+    color: #2196F3;
+}
+
+.footer-list-adress:hover,
+.footer-list-adress:focus {
+    color: #2196F3
+}
+
+
+/* спрятанная секция h1 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button {
+    font-family: 'Roboto';
+    font-style: normal;
+    color: var(--main-dark-clr);
+    background-color: #F5F4FA;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+}
+
+.button:hover,
+.button:focus {
+    background-color: #2196F3;
+    color: var(--main-white-clr);
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(36 / 18);
+}
+
+.subtitle-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    color: var(--main-gray-clr);
+}
+
+.hero-button,
+button {
+    cursor: pointer;
+}
