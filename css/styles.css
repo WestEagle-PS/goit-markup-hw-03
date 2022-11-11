@@ -1,29 +1,81 @@
-:root {
-    --main-dark-clr: #212121;
-    --main-gray-clr: #757575;
-    --main-white-clr: #FFFFFF;
-}
-
 /* 
 темный цвет основного текста #212121
 светлый цвет основного текста #757575
 светлый дополнительный цвеn текста #FFFFFF 
 */
 
+
+/* задаем глобальный border-box */
+html {
+    box-sizing: border-box;
+    width: 1600px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --main-dark-clr: #212121;
+    --main-gray-clr: #757575;
+    --main-white-clr: #FFFFFF;
+}
+
 body {
+    margin: 0;
     font-family: 'Roboto', 'Raleway', sans-serif;
     color: #212121;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
 }
 
 /* сброс маркированых точек в списках */
 .list {
     list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* section nav */
+
+.nav-menu {
+    display: flex;
+    margin-left: 93px;
+}
+
+
+/* работаем с nav menu, убираем маржен крайнему элементу, есть несколько вариантов: */
+/* вариант 1, все li кроме последнего*/
+.nav-menu .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+/* вариант 2 (old school): через + (соседство элементов) */
+/* .nav-menu .item+.item {
+    margin-left: 50px;
+} */
+
+.nav-link,
+.nav-contacts-link,
+{
+display: block;
+padding-top: 32px;
+padding-bottom: 32px;
+}
+
+.nav-contacts .item:not(:last-child) {
+    margin-right: 50px;
+}
+
 .header {
     background-color: var(--main-white-clr);
-    ;
 }
 
 .logo {
@@ -59,6 +111,11 @@ body {
     color: #2196F3;
 }
 
+.nav-contacts {
+    display: flex;
+    margin-left: auto;
+}
+
 .nav-contacts-link {
     font-weight: 500;
     font-size: 14px;
@@ -76,18 +133,33 @@ body {
     color: #2196F3;
 }
 
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+/* секция Hero, с основным заголовком */
 .hero {
+    margin-bottom: 94px;
+
     background-color: #2F303A;
+    text-align: center;
+    height: 600;
 }
 
 .hero-title {
+    padding-top: 195px;
+    margin-top: 0px;
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: calc(60 / 44);
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--main-white-clr);
+
+    text-align: center;
+
 }
 
 .hero-button {
@@ -96,11 +168,12 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30 / 16);
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: var(--main-white-clr);
+    cursor: pointer;
+    padding: 10px 32px;
+    margin-bottom: 205px;
+
     background-color: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -109,7 +182,24 @@ body {
 .hero-button:active {
     background-color: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+}
+
+
+/* секция наши преимущества (benefits) */
+.benefits-list {
+    display: flex;
+}
+
+.benefits {
+    margin-bottom: 94px;
+}
+
+.benefits-list .item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.benefits-list .items {
+    flex-basis: 270px;
 }
 
 .benefits-title {
@@ -121,6 +211,17 @@ body {
     color: var(--main-dark-clr);
 }
 
+.benefits-list,
+.benefits-text {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.benefits-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
 .benefits-text {
     font-weight: 400;
     font-size: 14px;
@@ -129,11 +230,40 @@ body {
     color: var(--main-gray-clr);
 }
 
+
+/* секция "чем мы занимаемся" */
+.work-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .section-title {
     font-weight: 700;
     font-size: 36px;
     line-height: calc(42 / 36);
     letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.work {
+    margin-bottom: 94px;
+}
+
+
+/* секция "наша команда" */
+.team-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 94px;
+}
+
+.card-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .card-title {
@@ -148,12 +278,29 @@ body {
     font-size: 16px;
     line-height: calc(19 / 16);
     color: var(--main-gray-clr);
+
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 
+/* секция footer */
 .footer {
     background-color: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+
+.footer-list>.item {
+    margin-bottom: 9px;
+}
+
+.footer-list>.item:first-child {
+    margin-top: 20px;
+}
+
+
 
 .footer-logo {
     font-family: 'Raleway';
@@ -192,7 +339,7 @@ body {
 }
 
 
-/* спрятанная секция h1 */
+/* спрятанная секция h1 в портфолио */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -215,6 +362,9 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: calc(26 / 16);
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
 }
 
 .button:hover,
@@ -234,9 +384,4 @@ body {
     font-size: 16px;
     line-height: calc(30 / 16);
     color: var(--main-gray-clr);
-}
-
-.hero-button,
-button {
-    cursor: pointer;
 }
